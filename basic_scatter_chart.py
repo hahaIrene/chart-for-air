@@ -12,8 +12,8 @@ Gallery 使用 pyecharts 1.1.0
 
 data = pd.read_csv(r'./data/raw_data.csv')
 data.sort(key=lambda x: x[0])
-x_data = [d[2] for d in data]
-y_data = [d[10] for d in data]
+x_data = data["PM2_5(μg/m3)"]
+y_data = data["TEMPERATURE(℃)"]
 
 (
     Scatter()
