@@ -11,7 +11,7 @@ Gallery 使用 pyecharts 1.1.0
 """
 
 data = pd.read_csv(r'./data/raw_data.csv')
-data.sort(key=lambda x: x[0])
+data = data.sort_values(by=["PM2_5(μg/m3)"])
 x_data = data["PM2_5(μg/m3)"]
 y_data = data["TEMPERATURE(℃)"]
 
