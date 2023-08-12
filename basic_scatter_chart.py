@@ -52,6 +52,6 @@ print(correlation_matrix)
 
 # 使用熱力圖繪製相關係數矩陣
 plt.figure(figsize=(10, 8))
-sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", vmin=-1, vmax=1)
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", vmin=-1, vmax=1, annot_kws={"size": 10}, fmt=".2f")
 plt.title("Correlation Matrix Heatmap")
 plt.show()
