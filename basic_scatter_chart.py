@@ -1,6 +1,8 @@
 import pyecharts.options as opts
 from pyecharts.charts import Scatter
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 # """
 # Gallery 使用 pyecharts 1.1.0
 # 参考地址: https://echarts.apache.org/examples/editor.html?c=scatter-simple
@@ -46,3 +48,9 @@ data = pd.read_csv(r'./data/for_chart_sd.csv')
 correlation_matrix = data.corr()
 
 print(correlation_matrix)
+
+# 使用熱力圖繪製相關係數矩陣
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", vmin=-1, vmax=1)
+plt.title("Correlation Matrix Heatmap")
+plt.show()
