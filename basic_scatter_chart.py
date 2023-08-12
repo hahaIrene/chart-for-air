@@ -1,6 +1,6 @@
-# import pyecharts.options as opts
-# from pyecharts.charts import Scatter
-# import pandas as pd
+import pyecharts.options as opts
+from pyecharts.charts import Scatter
+import pandas as pd
 # """
 # Gallery 使用 pyecharts 1.1.0
 # 参考地址: https://echarts.apache.org/examples/editor.html?c=scatter-simple
@@ -10,7 +10,7 @@
 # 1、暂无
 # """
 
-# data = pd.read_csv(r'./data/for_chart_sd.csv')
+data = pd.read_csv(r'./data/for_chart_sd.csv')
 # data = data.sort_values(by=["PM2_5(μg/m3)"])
 
 # x_data = data["PM2_5(μg/m3)"].astype(float).apply(lambda x: round(x, 2)).tolist()
