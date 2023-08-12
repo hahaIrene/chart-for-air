@@ -46,7 +46,7 @@ data = pd.read_csv(r'./data/for_chart_sd.csv')
 selected_columns = ["PM2_5(μg/m3)", "TEMPERATURE(℃)", "HUMIDITY(%)", "VOC(ppb)"]
 
 # 計算相關係數矩陣
-correlation_matrix = data.corr()
+correlation_matrix = selected_columns.corr()
 
 print(correlation_matrix)
 
